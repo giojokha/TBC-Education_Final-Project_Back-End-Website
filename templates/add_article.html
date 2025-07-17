@@ -1,0 +1,25 @@
+{% block content %}
+<link rel="stylesheet" href="/static/styles.css">
+<form class="p-5" method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {% for errors in form.errors.values() %}
+    <div class="alert alert-danger">
+        {% for error in errors %}
+            {{ error }}
+        {% endfor %}
+    </div>
+    {% endfor %}
+     <div class="mb-3 row">
+        {{ form.image(class="form-control") }}
+    </div>
+    <div class="mb-3 row">
+        {{ form.news_title(class="form-control", placeholder=form.news_title.label.text) }}
+    </div>
+    <div class="mb-3 row">
+        {{ form.Date(class="form-control", placeholder=form.Date.label.text) }}
+    </div>
+    <div class="mb-3 row">
+        {{ form.publish(class="button1", placeholder=form.publish.label.text) }}
+    </div>
+</form>
+{% endblock %}

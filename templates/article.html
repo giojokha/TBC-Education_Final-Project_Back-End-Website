@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="/static/styles.css">
+
+<div class="Your_div">
+    <div class="Your_div2">
+        <div class="Your_div3">
+            <img src="/static/imagess/{{ ambavi ['image'] }}" width="140">
+            <h2> ამბავი: {{ ambavi ['news_title'] }}</h2>
+            <h5>ამბის გამოშვების თარიღი: {{ ambavi['Date'] }}</h5>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

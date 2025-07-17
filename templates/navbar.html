@@ -1,0 +1,47 @@
+<h1 style="color:black; display:flex; justify-content:center; align-items:center;">"სიმართლე უპირველეს ყოვლისა"</h1>
+<div class="button_div">
+    {% if current_user.is_authenticated %}
+    <button><a href="/logout">გასვლა</a></button>
+    {% else %}
+    <button><a href="/login">ავტორიზაცია</a></button>
+    <button><a href="/register">დარეგისტრირება</a></button>
+    {% endif %}
+
+    {% if current_user.is_authenticated %}
+    <button><a href="/add_article">ინფორმაციის დამატება</a></button>
+    {% endif %}
+</div>
+
+<header>
+    <div class="div1">
+        <nav class="navbar">
+            <ul class="nav_links">
+
+                <li>
+                    <a href="/">მთავარი</a>
+                </li>
+                <li>
+                    <a href="/axali_ambebi">ახალი ამბები</a>
+                </li>
+                <li>
+                    <a href="/politika">პოლიტიკა</a>
+                </li>
+                <li>
+                    <a href="/ekonomika">ეკონომიკა</a>
+                </li>
+                <li>
+                    <a href="/msoflio">მსოფლიო</a>
+                </li>
+                <li>
+                    <a href="/sporti">სპორტი</a>
+                </li>
+                <li>
+                    <a href="/kultura">კულტურა</a>
+                </li>
+                <li>
+                    <a href="/about_us">ჩვენს შესახებ</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
